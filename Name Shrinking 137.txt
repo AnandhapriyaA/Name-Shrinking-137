@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class mains extends UserMainCode {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter name");
+		String name = scan.nextLine();
+		searchString(name);
+	}
+}
+class UserMainCode {
+	static String searchString(String str) {
+		StringBuilder sb = new StringBuilder();
+		String[] list = str.split(" ");
+		sb.append(list[list.length - 1]);
+		sb.append(" ");
+		sb.append(list[1].charAt(0));
+		sb.append(".");
+		sb.append(list[0].charAt(0));
+		System.out.println(sb.toString());
+		return sb.toString();
+	}
+}
